@@ -14,7 +14,7 @@ While this can be achieved with Bash [process substitution](http://tldp.org/LDP/
 ```bash
 #!/bin/bash
 STDOUT_PIPE_CMD="logger -p daemon.info"
-STDERR_PIPE_CMD="logger -p daemon.info"
+STDERR_PIPE_CMD="logger -p daemon.err"
 PROC_EXE="some_service"
 PROC_PARAMS="-p --param2 param2_value"
 
@@ -26,7 +26,7 @@ This is a non-standard extension and isn't always available (e.g. on FreeBSD).
 
 Basic usage:
 ```bash
-stdio-redir <stdio-command> <stderr-command> <cmd> <cmd args...>
+$ stdio-redir <stdout-command> <stderr-command> <cmd> <cmd args...>
 ```
 
 Example usage correlating to the above Bash code:
