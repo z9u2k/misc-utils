@@ -30,7 +30,7 @@ int redirect_fd(const char *cmd, int newd) {
 int main(int argc, char *argv[]) {
   int err;
 
-  if (argc < 4) {
+  if (4 > argc) {
     fprintf(stderr,
         "usage: %s <stdout_cmd> <stderr_cmd> <cmd> <cmd args...>\n"
         "example: %s \"logger -p daemon.info\" \"logger -p daemon.err\" "
